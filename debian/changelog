@@ -1,0 +1,25 @@
+uos-ai (2.13.504+deb13u1) unstable; urgency=medium
+
+  * Adapt packaging to the Debian 13 DDE25 baseline.
+  * Keep Qt6, Wayland, OCR and AI Bar packaging enabled.
+
+ -- guanzi008 <245205080@qq.com>  Sun, 12 Apr 2026 12:00:00 +0800
+
+uos-ai (2.13.504) unstable; urgency=medium
+
+  * update uos ai baseline version to V1.3.5
+  * fix mic can't use
+
+ -- zhangyu <zhangyub@uniontech.com>  Wed, 7 Aug 2024 21:16:34 +0800
+
+uos-ai (1.2.6) unstable; urgency=medium
+
+  * update uos ai baseline version to V1.2.6
+
+ -- zhangyu <zhangyub@uniontech.com>  Fri, 26 Apr 2024 13:26:24 +0800
+ 
+uos-ai (1.0.0) unstable; urgency=medium
+
+  * Initial Release.
+
+ -- Deepin Packages Builder <packages@deepin.com>  Wed, 12 Jul 2023 17:38:35 +0800

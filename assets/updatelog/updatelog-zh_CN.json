@@ -1,0 +1,83 @@
+[
+    {
+        "version": "V2.13",
+        "date-for-v20": "2026-03-05",
+        "date-for-v25": "2026-03-10",
+        "items": [
+            {
+                "type": "new",
+                "description": "AI写作智能体全新升级：\n·支持基于本地素材和大纲生成报告，内容更贴切。\n·支持端侧/私有模型，数据更安全。\n·支持参考信息来源追溯，内容更可信。\n·在线编辑实时修改，满意后再导出，调整更便捷。"
+            },
+            {
+                "type": "improvement",
+                "description": "随航视觉优化：图标与工具栏样式微调。"
+            },
+            {
+                "type": "new",
+                "description": "skill导入支持 zip、skill 压缩包格式。"
+            },
+            {
+                "type": "new",
+                "description": "优化 skill 导入成功 / 失败提示信息。"
+            },
+            {
+                "type": "new",
+                "description": "内置支持创建技能和查找技能。"
+            },
+            {
+                "type": "new",
+                "description": "默认模型升级为“智能调度”，动态提供deepseek‑v3.2、GLM‑4.7模型。"
+            }
+        ]
+    },
+    {
+        "version": "V2.12",
+        "date-for-v20": "2025-12-05",
+        "date-for-v25": "2025-11-25",
+        "items": [
+            {
+                "type": "improvement",
+                "description": "内置精选 MCP 服务，覆盖系统控制、文件管理、应用管理、联网协议、文档办公等多场景实用需求。"
+            },
+            {
+                "type": "improvement",
+                "description": "MCP服务升级为自动模式，开启MCP服务后自动匹配合适工具，无需手动选择。"
+            },
+            {
+                "type": "improvement",
+                "description": "MCP服务支持智能解析拖拽文件及文件路径。"
+            },
+            {
+                "type": "improvement",
+                "description": "UOS AI应用默认窗口模式。"
+            }
+        ]
+    },
+    {
+        "version": "V2.11",
+        "date-for-v20": "2025-10-16",
+        "date-for-v25": "2025-9-29",
+        "items": [
+            {
+                "type": "new",
+                "description": "个人知识库使用入口调整：将知识库使用入口加入到UOS AI智能体，方便使用。"
+            },
+            {
+                "type": "new",
+                "description": "添加文件到知识库方式增多：在随航、文件右键中新增【添加到AI知识库】入口。"
+            },
+            {
+                "type": "improvement",
+                "description": "文件上传和知识库支持格式改进：新增了Markdown、常见代码格式。"
+            },
+            {
+                "type": "improvement",
+                "description": "随航的快捷键变更为【Super+R】。"
+            },
+            {
+                "type": "improvement",
+                "description": "随航工具栏新增【问问AI】，支持针对选中内容进行快捷提问。"
+            }
+        ]
+    }
+]

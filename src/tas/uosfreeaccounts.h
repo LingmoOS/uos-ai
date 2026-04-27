@@ -1,0 +1,55 @@
+#ifndef UOSFREEACCOUNTS_H
+#define UOSFREEACCOUNTS_H
+#include "tasdef.h"
+#include "serverdefs.h"
+#include "networkdefs.h"
+
+#include <QString>
+#include <tuple>
+
+class HttpAccessmanager;
+class HttpEventLoop;
+
+class UosFreeAccounts
+{
+public:
+    static UosFreeAccounts &instance();
+
+    ~UosFreeAccounts();
+
+    // 按钮显示增加接口
+    QNetworkReply::NetworkError freeAccountButtonDisplay(const QString &type, UosFreeAccountActivity &freeAccountActivity);
+
+    // 获取免费账号接口
+    QNetworkReply::NetworkError getFreeAccount(const ModelType type, const LLMChatModel &llm, UosFreeAccount &freeAccount, int &status);
+
+    // 判断账号是否可用
+    QNetworkReply::NetworkError getDeterAccountLegal(const QString &appkey, int &available, QString &modelUrl, bool &claimAgain);
+
+    QNetworkReply::NetworkError claimAccountUsage(const QString &appkey, int &result, QString &msg);
+
+    QNetworkReply::NetworkError checkFreeModelActivity(const LLMChatModel type, int &result, UosFreeModelActivity &freeModelActivity);
+
+    // 增加账号使用次数
+    QNetworkReply::NetworkError increaseUse(const QString &appkey, int chatAction);
+
+    QString getLastError() const;
+
+    int getErrorCode() const;
+
+private:
+    UosFreeAccounts();
+
+    void initServerAddress();
+
+    QPair<QNetworkReply::NetworkError, QJsonObject> getHttpResponse(const QSharedPointer<HttpAccessmanager> hacc, const HttpEventLoop *loop);
+
+private:
+    QString m_lastError;
+
+    unsigned int m_status;
+
+    QString m_serverAddress;
+};
+
+#endif // UOSFREEACCOUNTS_H
