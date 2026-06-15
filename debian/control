@@ -33,7 +33,7 @@ Build-Depends:
  libdtk6ocr-dev | libdtkocr-dev,
  libpoppler-qt6-dev,
 # 任务栏插件需要 Qt5 进行构建
- dde-tray-loader-dev,
+ velora-tray-loader-dev,
  qtbase5-dev,
  libdtkwidget-dev,
  libprotobuf-dev,
