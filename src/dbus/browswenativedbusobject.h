@@ -6,7 +6,7 @@
 class BrowsweNativeDbusObject : public AppDbusObject
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "com.deepin.browsernative.app")
+    Q_CLASSINFO("D-Bus Interface", "com.lingmo.browsernative.app")
 
 public:
     explicit BrowsweNativeDbusObject(const QString &appId);

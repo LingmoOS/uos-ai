@@ -12,7 +12,7 @@ class AppDbusObject;
 class DBusInterface : public QObject, protected QDBusContext
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "com.deepin.copilot")
+    Q_CLASSINFO("D-Bus Interface", "com.lingmo.copilot")
 
     enum TaskType {
         TASK_UPDATE_LLM_ACCOUNT = 0,

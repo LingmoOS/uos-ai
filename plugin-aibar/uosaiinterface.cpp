@@ -40,7 +40,7 @@ void UosAiInterface::correctFile(const QString &file) const
 void UosAiInterface::addToKnowledgeBase(const QString &file) const
 {
     qCDebug(logAIBar) << "Adding file to knowledge base:" << file;
-    QDBusMessage msg = QDBusMessage::createMethodCall("com.deepin.copilot", "/org/deepin/copilot/chat",
+    QDBusMessage msg = QDBusMessage::createMethodCall("com.lingmo.copilot", "/org/lingmo/copilot/chat",
                                                       "org.deepin.copilot.chat", "sendToKnowledgeBase");
     QVariantList params;
     params.append(QStringList{file});
@@ -53,7 +53,7 @@ void UosAiInterface::addToKnowledgeBase(const QString &file) const
 void UosAiInterface::inputPrompt(const QString &question, const QString &file) const
 {
     qCDebug(logAIBar) << "Sending input prompt - Question:" << question << "File:" << file;
-    QDBusMessage msg = QDBusMessage::createMethodCall("com.deepin.copilot", "/org/deepin/copilot/chat",
+    QDBusMessage msg = QDBusMessage::createMethodCall("com.lingmo.copilot", "/org/lingmo/copilot/chat",
                                                       "org.deepin.copilot.chat", "inputPrompt");
     QVariantList params;
     QMap<QString, QString> ext;

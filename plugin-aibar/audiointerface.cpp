@@ -21,7 +21,7 @@ AudioInterface::AudioInterface()
 
 void AudioInterface::propertiesChanged(QString interface, QVariantMap changedProperties, QStringList)
 {
-    if (interface != "org.deepin.dde.Audio1"){
+    if (interface != "org.lingmo.Audio1"){
         qCDebug(logAIBar) << "Ignoring properties change for interface:" << interface;
         return;
     }
@@ -45,8 +45,8 @@ void AudioInterface::getAllSinkName()
     QDBusConnection connection = QDBusConnection::sessionBus();
 
     // 创建一个DBus接口
-   // 请确保com.deepin.daemon.Audio和org.freedesktop.DBus.Properties是你的服务名和接口名
-    QDBusInterface interface("org.deepin.dde.Audio1",
+   // 请确保com.lingmo.daemon.Audio和org.freedesktop.DBus.Properties是你的服务名和接口名
+    QDBusInterface interface("org.lingmo.Audio1",
                              "/org/deepin/dde/Audio1",
                              "org.freedesktop.DBus.Properties",
                              connection);
@@ -74,7 +74,7 @@ void AudioInterface::getAllSinkName()
 
 QString AudioInterface::getSinkName(const QString &path)
 {
-    auto msg = QDBusMessage::createMethodCall("org.deepin.dde.Audio1", path, "org.freedesktop.DBus.Properties"
+    auto msg = QDBusMessage::createMethodCall("org.lingmo.Audio1", path, "org.freedesktop.DBus.Properties"
                                               , "Get");
     QVariantList params;
     params << QVariant::fromValue(QString("org.deepin.dde.Audio1.SinkInput"));

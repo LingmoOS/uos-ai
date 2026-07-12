@@ -8,7 +8,7 @@ else
     # 判断 uos-ai-assistant 是否存在
     if [ -f "/usr/bin/uos-ai-assistant" ]; then
         # 调用 dbus-send 接口
-        dbus-send --print-reply --dest=com.deepin.copilot /com/deepin/copilot com.deepin.copilot.textTranslation
+        dbus-send --print-reply --dest=com.lingmo.copilot /com/lingmo/copilot com.lingmo.copilot.textTranslation
     else
         echo "Both DeepinAIAssistant and uos-ai-assistant do not exist."
     fi

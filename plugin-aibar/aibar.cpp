@@ -50,10 +50,10 @@ void AiBar::onClickIcon()
 {
     qCDebug(logAIBar) << "Attempting to launch AI assistant";
     QDBusConnection connection = QDBusConnection::sessionBus();
-    bool isServiceRegistered = connection.interface()->isServiceRegistered("com.deepin.copilot");
+    bool isServiceRegistered = connection.interface()->isServiceRegistered("com.lingmo.copilot");
     if (isServiceRegistered) {
         qCDebug(logAIBar) << "Found copilot service, attempting to launch chat page";
-        QDBusInterface notification("com.deepin.copilot", "/com/deepin/copilot", "com.deepin.copilot", QDBusConnection::sessionBus());
+        QDBusInterface notification("com.lingmo.copilot", "/com/lingmo/copilot", "com.lingmo.copilot", QDBusConnection::sessionBus());
         QString error = notification.call(QDBus::Block, "launchChatPage").errorMessage();
         if (error.isEmpty()) {
             qCDebug(logAIBar) << "Successfully launched chat page via DBus";

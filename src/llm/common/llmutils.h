@@ -9,7 +9,7 @@
 
 #define DBUS_SERVER             "com.deepin.copilot"
 #define DBUS_SERVER_PATH        "/com/deepin/copilot"
-#define DBUS_SERVER_INTERFACE   "com.deepin.copilot"
+#define DBUS_SERVER_INTERFACE   "com.lingmo.copilot"
 
 class AppDbusPathObject;
 class LLMUtils

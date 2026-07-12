@@ -36,8 +36,8 @@ UosAiPlugin::UosAiPlugin(QObject *parent)
 
     connect(DGuiApplicationHelper::instance(), &DGuiApplicationHelper::themeTypeChanged, this, &UosAiPlugin::changeTheme);
 #ifdef USE_DOCK_API_V2
-    QDBusConnection::sessionBus().connect("com.deepin.copilot", "/com/deepin/copilot", "com.deepin.copilot", "windowVisibleChanged", this, SLOT(onUosAiVisibleChanged(bool)));
-    QDBusConnection::sessionBus().connect("com.deepin.copilot", "/com/deepin/copilot", "com.deepin.copilot", "windowActiveChanged", this, SLOT(onUosAiVisibleChanged(bool)));
+    QDBusConnection::sessionBus().connect("com.lingmo.copilot", "/com/lingmo/copilot", "com.lingmo.copilot", "windowVisibleChanged", this, SLOT(onUosAiVisibleChanged(bool)));
+    QDBusConnection::sessionBus().connect("com.lingmo.copilot", "/com/lingmo/copilot", "com.lingmo.copilot", "windowActiveChanged", this, SLOT(onUosAiVisibleChanged(bool)));
 #endif
 }
 
@@ -104,9 +104,9 @@ const QString UosAiPlugin::itemCommand(const QString &itemKey)
     Q_UNUSED(itemKey);
 
     QDBusConnection connection = QDBusConnection::sessionBus();
-    bool isServiceRegistered = connection.interface()->isServiceRegistered("com.deepin.copilot");
+    bool isServiceRegistered = connection.interface()->isServiceRegistered("com.lingmo.copilot");
     if (isServiceRegistered) {
-        QDBusInterface notification("com.deepin.copilot", "/com/deepin/copilot", "com.deepin.copilot", QDBusConnection::sessionBus());
+        QDBusInterface notification("com.lingmo.copilot", "/com/lingmo/copilot", "com.lingmo.copilot", QDBusConnection::sessionBus());
         QString error = notification.call(QDBus::Block, "launchChatPage").errorMessage();
         if (error.isEmpty()) {
             qCInfo(logTray) << "Launched chat page via DBus";

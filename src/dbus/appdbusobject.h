@@ -7,7 +7,7 @@ class Session;
 class AppDbusObject : public QObject, protected QDBusContext
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "com.deepin.copilot.app")
+    Q_CLASSINFO("D-Bus Interface", "com.lingmo.copilot.app")
 
 public:
     explicit AppDbusObject(const QString &appId);

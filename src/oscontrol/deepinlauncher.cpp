@@ -62,12 +62,12 @@ DeepinLauncher::~DeepinLauncher()
 int DeepinLauncher::showLauncher()
 {
     /* V23:
-     *  qdbus --literal org.deepin.dde.Launcher1
+     *  qdbus --literal org.lingmo.Launcher1
      *      /org/deepin/dde/Launcher1
      *      org.deepin.dde.Launcher1.Show
      *
      * Other:
-     *  qdbus --literal com.deepin.dde.Launcher
+     *  qdbus --literal com.lingmo.Launcher
      *      /com/deepin/dde/Launcher
      *      com.deepin.dde.Launcher.Show
      * */
@@ -126,12 +126,12 @@ int DeepinLauncher::launchDesktop(const QString &pathApp)
 
     /*
      * V23:
-     *  qdbus --literal org.deepin.dde.StartManager1 /
+     *  qdbus --literal org.lingmo.StartManager1 /
      *      org/deepin/dde/StartManager1
      *      org.deepin.dde.StartManager1.Launch "<abs path>/xxx.desktop"
      *
      * Other:
-     *  qdbus --literal com.deepin.SessionManager
+     *  qdbus --literal com.lingmo.SessionManager
      *      /com/deepin/StartManager
      *      com.deepin.StartManager.Launch "<abs path>/xxx.desktop"
      * */

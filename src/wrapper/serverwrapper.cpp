@@ -67,7 +67,7 @@ bool ServerWrapper::initialization()
 
     m_chatDbusObject.reset(new ChatDBusInterface(this));
     //Register the dbus object used for registration
-    if (!connection.registerObject(QString("/org/deepin/copilot/chat"), m_chatDbusObject.data(),
+    if (!connection.registerObject(QString("/org/lingmo/copilot/chat"), m_chatDbusObject.data(),
                                    QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportScriptableSignals)) {
         QDBusError error = connection.lastError();
         qCCritical(logWrapper) << "Failed to register chat DBus path error:" << error.message();

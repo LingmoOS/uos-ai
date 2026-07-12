@@ -12,13 +12,13 @@ Q_DECLARE_LOGGING_CATEGORY(logDBus)
 
 UOSAI_USE_NAMESPACE
 
-#define KEYBINDING_SERVICE      "com.deepin.daemon.Keybinding"
-#define KEYBINDING_PATH         "/com/deepin/daemon/Keybinding"
-#define KEYBINDING_INTERFACE    "com.deepin.daemon.Keybinding"
+#define KEYBINDING_SERVICE      "com.lingmo.daemon.Keybinding"
+#define KEYBINDING_PATH         "/com/lingmo/daemon/Keybinding"
+#define KEYBINDING_INTERFACE    "com.lingmo.daemon.Keybinding"
 
-#define KEYBINDING_SERVICE_ALT  "org.deepin.dde.Keybinding1"
-#define KEYBINDING_PATH_ALT     "/org/deepin/dde/Keybinding1"
-#define KEYBINDING_INTERFACE_ALT "org.deepin.dde.Keybinding1"
+#define KEYBINDING_SERVICE_ALT  "org.lingmo.Keybinding1"
+#define KEYBINDING_PATH_ALT     "/org/lingmo/Keybinding1"
+#define KEYBINDING_INTERFACE_ALT "org.lingmo.Keybinding1"
 
 ShortcutManager::ShortcutManager(QObject *parent)
     : QObject(parent)

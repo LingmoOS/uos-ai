@@ -163,7 +163,7 @@ int DeepinCalendar::invoke(const QString &intent, const QJsonObject &objSchedule
 
     qCDebug(logOsControl) << "Invoking calendar operation - intent:" << intent << "data:" << strSchedule;
 
-    QDBusInterface scheduleInterface("com.deepin.Calendar",
+    QDBusInterface scheduleInterface("com.lingmo.Calendar",
                                      "/",
                                      "com.deepin.ExportedInterface");
 

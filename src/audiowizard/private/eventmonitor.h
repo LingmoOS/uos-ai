@@ -1,4 +1,4 @@
-﻿#ifndef EVENTMONITOR_H
+#ifndef EVENTMONITOR_H
 #define EVENTMONITOR_H
 //#define ENABLE_DBUS_XEVENT
 #ifndef  ENABLE_DBUS_XEVENT
@@ -66,7 +66,7 @@ private:
     int m_releaseY;
 
     QMap<int,bool> m_keyPressedMap;
-    com::deepin::api::XEventMonitor* m_xeventMonitor;
+    com::lingmo::api::XEventMonitor* m_xeventMonitor;
 };
 
 #endif

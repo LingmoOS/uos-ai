@@ -146,7 +146,7 @@ void FunctionsParser::openExec(const QString &mimeType)
         return;
     }
 
-    QDBusInterface notification("com.deepin.SessionManager", "/com/deepin/StartManager", "com.deepin.StartManager", QDBusConnection::sessionBus());
+    QDBusInterface notification("com.lingmo.SessionManager", "/com/lingmo/StartManager", "com.lingmo.StartManager", QDBusConnection::sessionBus());
     QList<QVariant> args;
     args.append("/usr/share/applications/" + outputString);
     QString error = notification.callWithArgumentList(QDBus::Block, "Launch", args).errorMessage();

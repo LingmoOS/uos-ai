@@ -471,7 +471,7 @@ int EAiProxy::isEnableScreenshot()
         return 1;
     }
 
-    QDBusMessage msg = QDBusMessage::createMethodCall("com.deepin.Screenshot",
+    QDBusMessage msg = QDBusMessage::createMethodCall("com.lingmo.Screenshot",
                                                      "/com/deepin/Screenshot",
                                                      "org.freedesktop.DBus.Introspectable",
                                                      "Introspect");
@@ -484,12 +484,12 @@ int EAiProxy::isEnableScreenshot()
         return 1;
     }
 
-    QDBusInterface dbusInterface("com.deepin.ScreenRecorder",
+    QDBusInterface dbusInterface("com.lingmo.ScreenRecorder",
                                  "/com/deepin/ScreenRecorder",
                                  "org.freedesktop.DBus.Properties",
                                  QDBusConnection::sessionBus());
 
-    QDBusReply<QDBusVariant> screenRecorderReply = dbusInterface.call("Get", "com.deepin.ScreenRecorder", "IsRecording");
+    QDBusReply<QDBusVariant> screenRecorderReply = dbusInterface.call("Get", "com.lingmo.ScreenRecorder", "IsRecording");
 
     if (screenRecorderReply.isValid()) {
         return screenRecorderReply.value().variant().toBool() ? 2 : 0;

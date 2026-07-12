@@ -4,9 +4,9 @@
 #include <QBuffer>
 #include <QLoggingCategory>
 
-#define LOCAL_TEXT2IMAGE_SERVICE      "com.deepin.texttoimage"
-#define LOCAL_TEXT2IMAGE_PATH         "/com/deepin/texttoimage"
-#define LOCAL_TEXT2IMAGE_INTERFACE    "com.deepin.texttoimage"
+#define LOCAL_TEXT2IMAGE_SERVICE      "com.lingmo.texttoimage"
+#define LOCAL_TEXT2IMAGE_PATH         "/com/lingmo/texttoimage"
+#define LOCAL_TEXT2IMAGE_INTERFACE    "com.lingmo.texttoimage"
 
 Q_DECLARE_LOGGING_CATEGORY(logDBus)
 

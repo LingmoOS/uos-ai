@@ -3,13 +3,13 @@
 #include <QLoggingCategory>
 
 #ifdef COMPILE_ON_V23
-#define CONTROL_CENTER_SERVICE      "org.deepin.dde.ControlCenter1"
-#define CONTROL_CENTER_PATH         "/org/deepin/dde/ControlCenter1"
-#define CONTROL_CENTER_INTERFACE    "org.deepin.dde.ControlCenter1"
+#define CONTROL_CENTER_SERVICE      "org.lingmo.ControlCenter1"
+#define CONTROL_CENTER_PATH         "/org/lingmo/ControlCenter1"
+#define CONTROL_CENTER_INTERFACE    "org.lingmo.ControlCenter1"
 #else
-#define CONTROL_CENTER_SERVICE      "com.deepin.dde.ControlCenter"
-#define CONTROL_CENTER_PATH         "/com/deepin/dde/ControlCenter"
-#define CONTROL_CENTER_INTERFACE    "com.deepin.dde.ControlCenter"
+#define CONTROL_CENTER_SERVICE      "com.lingmo.ControlCenter"
+#define CONTROL_CENTER_PATH         "/com/lingmo/ControlCenter"
+#define CONTROL_CENTER_INTERFACE    "com.lingmo.ControlCenter"
 #endif
 
 Q_DECLARE_LOGGING_CATEGORY(logDBus)

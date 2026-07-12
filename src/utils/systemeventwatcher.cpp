@@ -84,7 +84,7 @@ void SystemEventWatcher::onSessionManagerPropertiesChanged(const QString &interf
 
     qCDebug(logSystemEvent) << "SessionManager properties changed:" << interfaceName << changedProperties;
 
-    if (interfaceName == "com.deepin.SessionManager" && changedProperties.contains("Locked")) {
+    if (interfaceName == "com.lingmo.SessionManager" && changedProperties.contains("Locked")) {
         bool locked = changedProperties.value("Locked").toBool();
         qCDebug(logSystemEvent) << "Deepin SessionManager Locked changed:" << locked;
         if (locked) {

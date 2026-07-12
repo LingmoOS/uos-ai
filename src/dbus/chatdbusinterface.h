@@ -16,7 +16,7 @@ UOSAI_BEGIN_NAMESPACE
 class ChatDBusInterface : public QObject, protected QDBusContext
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "org.deepin.copilot.chat")
+    Q_CLASSINFO("D-Bus Interface", "org.lingmo.copilot.chat")
 public:
     explicit ChatDBusInterface(ServerWrapper *parent = nullptr);
 

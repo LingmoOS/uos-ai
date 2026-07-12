@@ -2,9 +2,9 @@
 
 #include <QLoggingCategory>
 
-#define LOCAL_SPEECHRECOGNITION_SERVICE      "com.deepin.speechrecognition"
-#define LOCAL_SPEECHRECOGNITION_PATH         "/com/deepin/speechrecognition"
-#define LOCAL_SPEECHRECOGNITION_INTERFACE    "com.deepin.speechrecognition"
+#define LOCAL_SPEECHRECOGNITION_SERVICE      "com.lingmo.speechrecognition"
+#define LOCAL_SPEECHRECOGNITION_PATH         "/com/lingmo/speechrecognition"
+#define LOCAL_SPEECHRECOGNITION_INTERFACE    "com.lingmo.speechrecognition"
 
 Q_DECLARE_LOGGING_CATEGORY(logDBus)
 

@@ -12,9 +12,9 @@ Q_DECLARE_LOGGING_CATEGORY(logDBus)
 static constexpr char kSystemAssistantEmbedding[] { "SystemAssistant" };
 static constexpr char kPersonlAssistantEmbedding[] { "uos-ai-assistant" };
 
-#define NM_SERVICE      "org.deepin.ai.daemon.VectorIndex"
-#define NM_PATH         "/org/deepin/ai/daemon/VectorIndex"
-#define NM_INTERFACE    "org.deepin.ai.daemon.VectorIndex"
+#define NM_SERVICE      "org.lingmo.ai.daemon.VectorIndex"
+#define NM_PATH         "/org/lingmo/ai/daemon/VectorIndex"
+#define NM_INTERFACE    "org.lingmo.ai.daemon.VectorIndex"
 
 EmbeddingServer::EmbeddingServer(QObject *parent) : QObject(parent)
 {

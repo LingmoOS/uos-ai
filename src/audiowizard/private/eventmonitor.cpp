@@ -1,4 +1,4 @@
-﻿#include <QDebug>
+#include <QDebug>
 #include <qcursor.h>
 #include <QGuiApplication>
 #include <QScreen>
@@ -175,12 +175,12 @@ void EventMonitorPrivate::handleXRecordEvent(XRecordInterceptData* data)
 /////////////////////////////////////////////////////////////////////////////////////////
 EventMonitor::EventMonitor(QObject* parent):QThread (parent)
 {
-    m_xeventMonitor = new com::deepin::api::XEventMonitor(
-                    "com.deepin.api.XEventMonitor", "/com/deepin/api/XEventMonitor", QDBusConnection::sessionBus(), this);
-        connect(m_xeventMonitor,&com::deepin::api::XEventMonitor::ButtonPress,this,&EventMonitor::onButtonPress);
-        connect(m_xeventMonitor,&com::deepin::api::XEventMonitor::ButtonRelease,this,&EventMonitor::onButtonRelease);
-        connect(m_xeventMonitor,&com::deepin::api::XEventMonitor::KeyPress,this,&EventMonitor::onKeyPress);
-        connect(m_xeventMonitor,&com::deepin::api::XEventMonitor::KeyRelease,this,&EventMonitor::onKeyRelease);
+    m_xeventMonitor = new com::lingmo::api::XEventMonitor(
+                    "com.lingmo.api.XEventMonitor", "/com/lingmo/api/XEventMonitor", QDBusConnection::sessionBus(), this);
+        connect(m_xeventMonitor,&com::lingmo::api::XEventMonitor::ButtonPress,this,&EventMonitor::onButtonPress);
+        connect(m_xeventMonitor,&com::lingmo::api::XEventMonitor::ButtonRelease,this,&EventMonitor::onButtonRelease);
+        connect(m_xeventMonitor,&com::lingmo::api::XEventMonitor::KeyPress,this,&EventMonitor::onKeyPress);
+        connect(m_xeventMonitor,&com::lingmo::api::XEventMonitor::KeyRelease,this,&EventMonitor::onKeyRelease);
 }
 EventMonitor* EventMonitor::instance()
 {

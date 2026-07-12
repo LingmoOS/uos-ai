@@ -13,11 +13,11 @@ Q_DECLARE_LOGGING_CATEGORY(logDBus)
 
 namespace {
 #ifdef COMPILE_ON_V20
-constexpr char kAudioService[] = "com.deepin.daemon.Audio";
-constexpr char kAudioPath[] = "/com/deepin/daemon/Audio";
+constexpr char kAudioService[] = "com.lingmo.daemon.Audio";
+constexpr char kAudioPath[] = "/com/lingmo/daemon/Audio";
 #else
-constexpr char kAudioService[] = "org.deepin.dde.Audio1";
-constexpr char kAudioPath[] = "/org/deepin/dde/Audio1";
+constexpr char kAudioService[] = "org.lingmo.Audio1";
+constexpr char kAudioPath[] = "/org/lingmo/Audio1";
 #endif
 }
 
